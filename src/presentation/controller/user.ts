@@ -1,5 +1,13 @@
+import { UserService } from '../service/user'
+
 export class UserController {
-  findUser = (body: any) => {
-    return { statusCode: 200, data: { message: 'Hello World ' } }
-  };
+  userService: UserService;
+  constructor (userService: UserService) {
+    this.userService = userService
+  }
+
+  async findUser (body: any) {
+    const users = await this.userService.findUser()
+    return { statusCode: 200, data: { users } }
+  }
 }

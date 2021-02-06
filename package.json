@@ -28,12 +28,14 @@
     "reflect-metadata": "^0.1.10",
     "swagger-jsdoc": "^6.0.2",
     "swagger-ui-express": "^4.1.6",
+    "ts-jest": "^26.5.0",
     "typeorm": "0.2.30"
   },
   "scripts": {
     "start": "node dist/server.ts",
     "dev": "tsnd --inspect=3434 --exit-child --transpile-only --respawn --ignore-watch node_modules src/index.ts",
     "test": "jest",
+    "test:staged": "jest --passWithNoTests",
     "build": "tsc -p ."
   }
 }
