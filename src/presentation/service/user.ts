@@ -7,7 +7,7 @@ export class UserService {
     this.userRepository = userRepository
   }
 
-  findUser () {
+  findUser = () => {
     return this.userRepository.find()
-  }
+  };
 }
