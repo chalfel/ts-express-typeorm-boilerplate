@@ -1,0 +1,18 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "root",
+  "password": "root",
+  "database": "app_db",
+  "synchronize": true,
+  "logging": false,
+  "entities": ["src/domain/entity/**/*{.ts, .js}"],
+  "migrations": ["src/infra/db/migration/**/*{.ts, .js}"],
+  "subscribers": ["src/infra/db/subscriber/**/*{.ts, .js}"],
+  "cli": {
+    "entitiesDir": "src/domain/entity",
+    "migrationsDir": "src/infra/db/migration",
+    "subscribersDir": "src/infra/db/subscriber"
+  }
+}
