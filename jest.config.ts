@@ -3,6 +3,8 @@ export default {
   collectCoverage: true,
   coverageReporters: ['text-summary', 'lcov'],
   coverageDirectory: 'coverage',
+  coveragePathIgnorePatterns: ['/node_modules/'],
+  testResultsProcessor: 'jest-sonar-reporter',
   coverageProvider: 'v8',
   testEnvironment: 'node',
   preset: 'ts-jest',
