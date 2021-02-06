@@ -2,15 +2,12 @@ FROM node:lts
 
 WORKDIR /home/node/app
 
-ADD . .
+COPY build .
 
 ENV NODE_ENV=production
-
-RUN yarn \
-    && yarn build
 
 USER node
 
 EXPOSE 3333
 
-CMD [ "node", "build/index.js" ]
+CMD [ "node", "dist/src/main/index.js" ]

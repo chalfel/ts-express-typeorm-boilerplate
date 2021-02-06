@@ -1,6 +1,6 @@
 import { Router } from 'express'
-import { ExpressAdapter } from '../../infra/adapter/express'
-import { makeUserController } from '../factory/user'
+import { ExpressAdapter } from '../adapter/express'
+import { makeUserController } from '../../presentation/factory/user'
 
 export default (router: Router) => {
   const userController = makeUserController()

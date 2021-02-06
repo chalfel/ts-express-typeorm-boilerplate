@@ -1,7 +1,7 @@
 import 'reflect-metadata'
 import * as dotenv from 'dotenv'
-import { setupDb } from './infra/db/config'
-import { setupExpress } from './infra/express/config'
+import { setupDb } from '../infra/db/config'
+import { setupExpress } from './config/express'
 
 const bootstrap = async () => {
   try {

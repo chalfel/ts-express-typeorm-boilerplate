@@ -32,8 +32,8 @@
     "typeorm": "0.2.30"
   },
   "scripts": {
-    "start": "node dist/server.ts",
-    "dev": "tsnd --inspect=3434 --exit-child --transpile-only --respawn --ignore-watch node_modules src/index.ts",
+    "start": "node build/main/index.ts",
+    "dev": "tsnd --inspect=3434 --exit-child --transpile-only --respawn --ignore-watch node_modules src/main/index.ts",
     "test": "jest",
     "test:staged": "jest --passWithNoTests",
     "build": "tsc -p ."
