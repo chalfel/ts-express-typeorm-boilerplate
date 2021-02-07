@@ -15,7 +15,6 @@ RUN yarn install --frozen-lockfile
 
 COPY . .
 
-RUN yarn migrate
 RUN yarn build
 
 ##############################################################################################

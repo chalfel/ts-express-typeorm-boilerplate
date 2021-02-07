@@ -40,7 +40,7 @@
     "indent": 4
   },
   "scripts": {
-    "start": "node build/main/index.ts",
+    "start": "node build/src/main/index.js",
     "migrate": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js --config src/infra/db/ormconfig.ts migration:run",
     "dev": "tsnd --inspect=3434 --exit-child --transpile-only --respawn --ignore-watch node_modules src/main/index.ts",
     "test": "jest --coverage --detectOpenHandles",

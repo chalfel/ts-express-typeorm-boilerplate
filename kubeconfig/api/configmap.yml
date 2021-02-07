@@ -4,10 +4,9 @@ metadata:
     name: api-conf
 data:
   env: |
-    NODE_ENV=:dev
-    PORT=3333
+    NODE_ENV=dev
+    APP_PORT=3333
     DB_HOST=postgres-service
     DB_USER=root
     DB_PORT=5432
     DB_DATABASE=app_db
-
