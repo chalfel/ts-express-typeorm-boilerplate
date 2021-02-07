@@ -1,5 +1,22 @@
-import { createConnection } from 'typeorm'
+import { createConnection, getConnection } from 'typeorm'
 
-export const setupDb = async () => {
-  await createConnection()
+export class TypeOrmConfig {
+  static async createConnection () {
+    await createConnection()
+  }
+
+  static async close () {
+    await getConnection().close()
+  }
+
+  static async clear () {
+    const connection = getConnection()
+    const entities = connection.entityMetadatas
+
+    const promises = entities.map((entity) => {
+      const repository = connection.getRepository(entity.name)
+      return repository.query(`DELETE FROM ${entity.tableName}`)
+    })
+    await Promise.all(promises)
+  }
 }

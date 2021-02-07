@@ -42,7 +42,7 @@
   "scripts": {
     "start": "node build/main/index.ts",
     "dev": "tsnd --inspect=3434 --exit-child --transpile-only --respawn --ignore-watch node_modules src/main/index.ts",
-    "test": "jest --coverage",
+    "test": "jest --coverage --detectOpenHandles",
     "test:staged": "jest --passWithNoTests",
     "sonar": "node sonar-project.ts",
     "build": "tsc -p ."

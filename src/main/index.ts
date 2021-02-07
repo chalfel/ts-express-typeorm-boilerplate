@@ -1,12 +1,12 @@
 import 'reflect-metadata'
 import * as dotenv from 'dotenv'
-import { setupDb } from '../infra/db/config'
+import { TypeOrmConfig } from '../infra/db/config'
 import { setupExpress } from './config/express'
 
 const bootstrap = async () => {
   try {
     dotenv.config()
-    await setupDb()
+    await TypeOrmConfig.createConnection()
     const app = setupExpress()
     app.listen(process.env.PORT, () => console.log('Server is running'))
   } catch (err) {

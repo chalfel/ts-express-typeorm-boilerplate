@@ -7,3 +7,4 @@ temp/
 .env
 .pgdata/
 coverage/
+.scannerwork/
