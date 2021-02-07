@@ -8,7 +8,6 @@ const bootstrap = async () => {
     dotenv.config()
     await TypeOrmConfig.createConnection()
     const app = setupExpress()
-    console.log(process.env.APP_PORT)
     app.listen(process.env.APP_PORT || 3333, () =>
       console.log('Server is running')
     )
