@@ -10,7 +10,7 @@ export default {
   database: process.env.DB_DATABASE,
   synchronize: false,
   logging: false,
-  entities: [path.join(__dirname, '/../../domain/entity/**/*{.ts, .js}')],
+  entities: [path.join(__dirname, '/../../domain/entity/**/*')],
   migrations: [
     path.join(__dirname, '/../../infra/db/migration/**/*{.ts, .js}')
   ],
