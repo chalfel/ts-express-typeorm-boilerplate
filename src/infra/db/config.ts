@@ -1,8 +1,8 @@
 import { createConnection, getConnection } from 'typeorm'
-
+import ormConfig from './ormconfig'
 export class TypeOrmConfig {
   static async createConnection () {
-    await createConnection()
+    await createConnection(ormConfig)
   }
 
   static async close () {

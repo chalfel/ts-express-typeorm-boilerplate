@@ -1,11 +1,11 @@
 import { Entity, PrimaryGeneratedColumn, Column, BaseEntity } from 'typeorm'
 
-@Entity()
+@Entity('users')
 export class User extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ name: 'first_name' })
   firstName: string;
 
   constructor (data: Partial<User>) {
