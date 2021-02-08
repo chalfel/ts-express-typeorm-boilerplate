@@ -9,6 +9,9 @@ services:
       - "3333:3333"
     volumes:
       - .:/app
+    environment:
+      - DB_HOST=db
+    command: "yarn dev"
   db:
     image: postgres:11
     restart: always

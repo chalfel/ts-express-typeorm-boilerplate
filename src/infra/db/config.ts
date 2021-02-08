@@ -2,7 +2,6 @@ import { ConnectionOptions, createConnection, getConnection } from 'typeorm'
 import ormConfig from './ormconfig'
 export class TypeOrmConfig {
   static async createConnection () {
-    console.log(ormConfig)
     await createConnection(ormConfig as ConnectionOptions)
   }
 

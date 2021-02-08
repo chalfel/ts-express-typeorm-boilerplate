@@ -11,11 +11,9 @@ export default {
   synchronize: false,
   logging: false,
   entities: [path.join(__dirname, '/../../domain/entity/**/*')],
-  migrations: [
-    path.join(__dirname, '/../../infra/db/migration/**/*{.ts, .js}')
-  ],
+  migrations: [path.join(__dirname, '/../../infra/db/migration/**/*')],
   cli: {
     entitiesDir: 'src/domain/entity',
-    migrationsDir: 'src/infra/db/migration'
+    migrationsDir: path.join(__dirname, '/../../infra/db/migration')
   }
 }
